@@ -86,17 +86,31 @@ Exécuter le fichier python "ftp_test.py"
 #### 2.1.4 Vérifier le trafic intercepté :
 Ca genre de résultat attendu :
  ```sh
-    [*] Listening on 127.0.0.1:2121
-> Received incoming connection from 127.0.0.1:64332
-    0000 32 32 30 20 28 76 73 46 54 50 64 20 33 2E 30 2E  220 (vsFTPd 3.0.
-0010 32 29 0D 0A                                      2)..
-[<==] Sending 20 bytes to localhost.
-[==>]Received 11 bytes from localhost.
+[*] Écoute sur 127.0.0.1:2121
+[==>] Connexion entrante de 127.0.0.1:57720
+[<==] Reçu 28 octets du serveur distant.
+0000 32 32 30 20 70 79 66 74 70 64 6C 69 62 20 32 2E  220 pyftpdlib 2.
+0010 30 2E 31 20 72 65 61 64 79 2E 0D 0A              0.1 ready...
+[==>] Reçu 11 octets du client local.
 0000 55 53 45 52 20 75 73 65 72 0D 0A                 USER user..
-[==>] Sent to remote.
-[<==] Received 34 bytes from remote.
-0000 33 33 31 20 50 6C 65 61 73 65 20 73 70 65 63 69  331 Please speci
-0010 66 79 20 74 68 65 20 70 61 73 73 77 6F 72 64 2E  fy the password.
-0020 0D 0A                                            ..
-[<==] Sent to localhost.
+[==>] Envoyé au serveur distant.
+[<==] Reçu 33 octets du serveur distant.
+0000 33 33 31 20 55 73 65 72 6E 61 6D 65 20 6F 6B 2C  331 Username ok,
+0010 20 73 65 6E 64 20 70 61 73 73 77 6F 72 64 2E 0D   send password..
+0020 0A                                               .
+[<==] Envoyé au client local.
+[==>] Reçu 11 octets du client local.
+0000 50 41 53 53 20 70 61 73 73 0D 0A                 PASS pass..
+[==>] Envoyé au serveur distant.
+[<==] Reçu 23 octets du serveur distant.
+0000 32 33 30 20 4C 6F 67 69 6E 20 73 75 63 63 65 73  230 Login succes
+0010 73 66 75 6C 2E 0D 0A                             sful...
+[<==] Envoyé au client local.
+[==>] Reçu 6 octets du client local.
+0000 51 55 49 54 0D 0A                                QUIT..
+[==>] Envoyé au serveur distant.
+[<==] Reçu 14 octets du serveur distant.
+0000 32 32 31 20 47 6F 6F 64 62 79 65 2E 0D 0A        221 Goodbye...
+[<==] Envoyé au client local.
+[*] Plus de données, fermeture des connexions.
   ```
