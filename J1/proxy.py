@@ -39,11 +39,9 @@ def receive_from(connection):
         pass
     return buffer
 
-# Fonction pour modifier une requête avant de l'envoyer (peut être personnalisé)
 def request_handler(buffer):
     return buffer
 
-# Fonction pour modifier une réponse avant de l'envoyer (peut être personnalisé)
 def response_handler(buffer):
     return buffer
 
